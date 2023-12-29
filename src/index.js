@@ -15,8 +15,6 @@ const downloadInstagram = require('./downloaders/instagram_dl');
 const downloadTwitterVideo = require('./downloaders/twitter_dl');
 const helpMessage = require('./helpMessage.json');
 
-const SECONDS_PER_MINUTE = 60;
-
 let isBotRunning = false;
 const userLastLinkTime = {};
 
