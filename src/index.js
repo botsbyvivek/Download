@@ -9,14 +9,17 @@ if (process.env.LOCAL_SERVER) {
     bot = new Telegraf(process.env.BOT_TOKEN);
 }
 
-let bot;
-if (process.env.process.env.PORT || 5001) {
-    bot = new Telegraf(process.env.PORT || 5001), { telegram: { apiRoot: process.env.LOCAL_SERVER } });
-} else {
-    bot = new Telegraf(process.env.PORT || 5001);
-}
+const express = require('express')
+const path = require('path')
 
 const PORT = process.env.PORT || 5001
+
+express()
+  .use(express.static(path.join(__dirname, 'public')))
+  .set('views', path.join(__dirname, 'views'))
+  .set('view engine', 'ejs')
+  .get('/', (req, res) => res.render('pages/index'))
+  .listen(PORT, () => console.log(`Listening on ${ PORT }`))
 
 const downloadYoutubeVideo = require('./downloaders/youtube_dl');
 const downloadTikTokVideo = require('./downloaders/tiktok_dl')(bot);
