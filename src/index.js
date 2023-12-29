@@ -10,8 +10,20 @@ if (process.env.LOCAL_SERVER) {
 }
 
 const PORT = process.env.PORT || 5001;
+
 app.listen(PORT, () => {
-    console.log(`Our app is running on port ${ PORT }`);
+    console.log(Our app is running on port ${PORT});
+});
+
+// Add this block to catch and log errors
+process.on('uncaughtException', (err) => {
+    console.error('Uncaught Exception:', err);
+    process.exit(1);
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+    console.error('Unhandled Rejection at:', promise, 'reason:', reason);
+    process.exit(1);
 });
 
 const downloadYoutubeVideo = require('./downloaders/youtube_dl');
