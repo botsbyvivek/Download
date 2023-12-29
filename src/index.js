@@ -37,11 +37,6 @@ bot.help(async (ctx) => {
 bot.on('text', async (ctx) => {
     const { id: userId } = ctx.from;
     const { text, date: messageTime } = ctx.message;
-    const currentTime = Math.floor(Date.now() / 1000);
-
-    if (currentTime - messageTime > SECONDS_PER_MINUTE) {
-        return;
-    }
 
     if (userLastLinkTime[userId] && Date.now() - userLastLinkTime[userId] < 5000) {
         await ctx.reply('You can send a link once in 5 seconds');
