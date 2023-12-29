@@ -9,6 +9,13 @@ if (process.env.LOCAL_SERVER) {
     bot = new Telegraf(process.env.BOT_TOKEN);
 }
 
+let bot;
+if (process.env.process.env.PORT || 5001) {
+    bot = new Telegraf(process.env.PORT || 5001), { telegram: { apiRoot: process.env.LOCAL_SERVER } });
+} else {
+    bot = new Telegraf(process.env.PORT || 5001);
+}
+
 const PORT = process.env.PORT || 5001
 
 const downloadYoutubeVideo = require('./downloaders/youtube_dl');
