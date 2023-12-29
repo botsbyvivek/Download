@@ -22,7 +22,7 @@ const userLastLinkTime = {};
 
 bot.start(async (ctx) => {
     isBotRunning = true;
-    await ctx.reply(`Hi ${ctx.from.first_name ? ctx.from.first_name : 'user'}! Send me a link:`);
+    await ctx.reply(`🤖 Hi ${ctx.from.first_name ? ctx.from.first_name : 'user'}! I'm a downloader bot`);
 });
 
 bot.help(async (ctx) => {
