@@ -22,7 +22,7 @@ const userLastLinkTime = {};
 
 bot.start(async (ctx) => {
     isBotRunning = true;
-    await ctx.reply(`🤖 Hi ${ctx.from.first_name ? ctx.from.first_name : 'user'}! I'm a downloader bot\n\nBot is a Telegram bot designed to help users easily download media from various social media platforms such as *YouTube, TikTok, Instagram, and Twitter*. Just send me a link to post with media.\n\nif any questions ask at @BotsXChat`);
+    await ctx.reply(`🤖 Hi ${ctx.from.first_name ? ctx.from.first_name : 'user'}! I'm a downloader bot\n\nBot is a Telegram bot designed to help users easily download media from various social media platforms such as <b>YouTube, TikTok, Instagram, and Twitter</b>. Just send me a link to post with media.\n\nif any questions ask at @BotsXChat`{parse_mode: "HTML" });
 });
 
 bot.help(async (ctx) => {
