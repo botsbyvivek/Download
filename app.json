@@ -1,0 +1,28 @@
+{
+    "name": "Downloader",
+    "description": "Bot is a Telegram bot designed to help users easily download videos from various social media platforms such as YouTube, TikTok, Instagram, and Twitter.",
+    "keywords": [
+        "bot",
+        "downloader",
+        "telegram",
+        "download bot"
+    ],
+    "repository": "https://github.com/botsbyvivek/Download",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg",
+    "success_url": "https://dashboard.heroku.com/apps/",
+    
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "addons": [
+        {
+            "plan": "heroku-postgresql",
+            "options": {
+                "version": "13"
+            }
+        }
+    ],
+    "stack": "heroku-22"
+}
