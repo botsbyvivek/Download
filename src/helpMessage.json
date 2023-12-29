@@ -1,6 +1,6 @@
 {
   "helpMessage": [
-    "@AYNT_Bot is designed to download video and audio tracks from social networks.",
+    "@download_itbot is designed to download video and audio tracks from social networks.",
     "",
     "How to use:",
     "",
@@ -14,6 +14,7 @@
     "  - Instagram",
     "  - Twitter",
     "",
-    "Feedback - @DivamYT"
+    "Feedback - @unocy",
+    "All credits goes to the real developer"
   ]
 }
