@@ -1,20 +1,22 @@
 {
   "helpMessage": [
-    "@download_itbot is designed to download video and audio tracks from social networks.",
+    "🤖 @download_itbot is designed to download video and audio tracks from social networks.",
     "",
-    "How to use:",
+    "⁉️ How to use:",
     "",
     "  1. Go to the page with an interesting video (for example - https://www.youtube.com/watch?v=dQw4w9WgXcQ or https://youtu.be/dQw4w9WgXcQ).",
     "  2. Send link in chat.",
     "  3. Bot will send you video in telegram chat.",
     "",
-    "Currently you can download from:",
+    "✅️ Currently you can download from:",
     "  - Youtube(in developing)",
     "  - Tiktok",
     "  - Instagram",
     "  - Twitter",
     "",
-    "Feedback - @unocy",
+    "Note ⚠️ : In This Version(v1.0) This Bot Only Can Download Media Under 50MB, We are developing new api to solve this and increase it to 2GB",
+    "",
+    "💭 Feedback - @unocy",
     "All credits goes to the real developer"
   ]
 }
