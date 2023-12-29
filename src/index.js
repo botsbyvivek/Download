@@ -12,7 +12,7 @@ if (process.env.LOCAL_SERVER) {
 const PORT = process.env.PORT || 5001;
 
 app.listen(PORT, () => {
-    console.log(Our app is running on port ${PORT});
+    console.log('Our app is running on port ${PORT}');
 });
 
 // Add this block to catch and log errors
