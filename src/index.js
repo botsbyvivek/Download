@@ -1,6 +1,9 @@
 const { Telegraf } = require('telegraf');
 require('dotenv').config();
 const cron = require('node-cron');
+const PORT = process.env.PORT || 5001;
+const express = require('express');
+const app = express();
 
 let bot;
 if (process.env.LOCAL_SERVER) {
@@ -8,11 +11,6 @@ if (process.env.LOCAL_SERVER) {
 } else {
     bot = new Telegraf(process.env.BOT_TOKEN);
 }
-
-const PORT = process.env.PORT || 5001;
-
-const express = require('express');
-const app = express();
 
 app.listen(PORT, () => {
     console.log('Our app is running on port ${PORT}');
