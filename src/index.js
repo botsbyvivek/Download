@@ -9,6 +9,8 @@ if (process.env.LOCAL_SERVER) {
     bot = new Telegraf(process.env.BOT_TOKEN);
 }
 
+const PORT = process.env.PORT || 5001
+
 const downloadYoutubeVideo = require('./downloaders/youtube_dl');
 const downloadTikTokVideo = require('./downloaders/tiktok_dl')(bot);
 const downloadInstagram = require('./downloaders/instagram_dl');
